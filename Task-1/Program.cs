@@ -110,6 +110,7 @@ namespace Task_1
 
                     for (int j = 0; j < employees.Count; j++)
                     {
+                        Console.Write($"Employee Details:{j}");
                         Employee employee = employees[j];
                         employee.display();
                         Department department = departments[j];

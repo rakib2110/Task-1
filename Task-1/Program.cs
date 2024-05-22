@@ -108,7 +108,7 @@ namespace Task_1
                     employees.Add(EE);
                     departments.Add(RR);
 
-                    for (int j = 0; j < employees.Count; j++)
+                    for (int j = 1; j <= employees.Count; j++)
                     {
                         Console.Write($"Employee Details:{j}");
                         Employee employee = employees[j];

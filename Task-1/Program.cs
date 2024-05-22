@@ -114,7 +114,7 @@ namespace Task_1
                         employee.display();
                     }
                 }
-
+                // thi
 
                 // Employee list = new Employee(int id,string name,int code,string dob,string doj,string bd,int d_id,bool active);
                 //list.display();

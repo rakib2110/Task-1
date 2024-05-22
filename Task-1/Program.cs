@@ -85,7 +85,7 @@ namespace Task_1
                     d_name = Console.ReadLine();
                     active = true;
 
-                    Employee New = new Employee()
+                    Employee EE = new Employee()
                     {
                         Id = id,
                         Name = name,
@@ -105,16 +105,17 @@ namespace Task_1
                         IsActive = active,
 
                     };
-                    employees.Add(New);
+                    employees.Add(EE);
                     departments.Add(RR);
 
                     for (int j = 0; j < employees.Count; j++)
                     {
                         Employee employee = employees[j];
                         employee.display();
+                        Department department = departments[j];
+                        department.display();
                     }
                 }
-                
 
                 // Employee list = new Employee(int id,string name,int code,string dob,string doj,string bd,int d_id,bool active);
                 //list.display();

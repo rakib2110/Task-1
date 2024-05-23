@@ -2,6 +2,7 @@
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Text.Json;
 using System.Xml.Linq;
 namespace Task_1
 {
@@ -98,23 +99,28 @@ namespace Task_1
 
 
                     };
-                    Department RR = new Department()
-                    {
-                        DepartmentId = d_id,
-                        DepartmentName = d_name,
-                        IsActive = active,
+                    //Department RR = new Department()
+                    //{
+                    //    DepartmentId = d_id,
+                    //    DepartmentName = d_name,
+                    //    IsActive = active,
 
-                    };
+                    //};
                     employees.Add(EE);
-                    departments.Add(RR);
+                    //departments.Add(RR);
+                    //Department department1 = new Department();
+                    var department1 = File.ReadAllText("department.json");
+                    Department department2 = JsonSerializer.Deserialize<Department>(department1);
+                    Console.WriteLine(department1);
+
 
                     for (int j = 1; j <= employees.Count; j++)
                     {
                         Console.Write($"Employee Details:{j+1}");
                         Employee employee = employees[j];
                         employee.display();
-                        Department department = departments[j];
-                        department.display();
+                        //Department department = departments[j];
+                        //department.display();
                     }
                 }
 
